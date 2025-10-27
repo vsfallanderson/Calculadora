@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CALCULADORA</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>CALCULADORA</h1>
+
+            <div class="imput-group">
+                <input type="number" id="num1" placeholder="Primeiro número" step="any">
+                <input type="number" id="num2" placeholder="Segundo número" step="any">
+            </div>
+
+            <div class="botoes">
+                <button class="btn-soma" onclick="calcular('soma')">➕ Somar</button>
+                <button class='btn-subtracao' onclick="calcular('subtracao')">➖ Subtrair</button>
+                <button class='btn-multiplicacao' onclick="calcular('multiplicacao')">✖️ Multiplicar</button>
+                <button class='btn-divisao' onclick="calcular('divisao')">➗ Dividir</button>
+                <button class='btn-limpar' onclick="limpar()">🗑️ Limpar</button>
+            
+            </div>
+
+             <div id="resultado">
+            <p class="mensagem-inicial">Digite os números e escolha a operação</p>
+            </div>    
+        </div>
+        <script src="script.js"></script>
+    </body>    
+</html>

@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(135deg, #001327, #a1c6ea);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container{
+    background: rgba(11, 9, 141, 0.21);
+    padding: 80px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgb(232, 232, 237);
+    max-width: 450px;
+    width: 100%;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 35px;
+    color: #ebeaec;
+}
+
+.input-group{
+    margin-bottom: 20px;
+}
+
+input[type="number"]{
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 17px;
+    transition: all 0.3s;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+input[type="number"]:focus{
+    border-color: #c8c9ce;
+    box-shadow: 0 0 3px rgba(176, 179, 194, 0.295);
+    outline: none;
+}
+
+.botoes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+button {
+    padding: 18px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}    
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(213, 213, 213, 0.3);
+}
+
+button:active {
+    transform: scale(1.05);
+    filter: brightness(1.15);
+    box-shadow: 0 3px 10px rgba(193, 193, 193, 0.2);
+}
+
+.btn-soma {background: linear-gradient(135deg, #011362 0%, #636ceb 100%);}
+.btn-subtracao {background: linear-gradient(135deg, #ecaae9 0%, #c700d9 100%);}
+.btn-multiplicacao {background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);}
+.btn-divisao {background: linear-gradient(135deg, #ff2f06 0%, #ee8e8e 100%);}
+
+.btn-limpar {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+#resultado {
+    background: linear-gradient(135deg, #dde0e2ef 0%, #1c0136bc 100%);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+#resultado.show {
+    animation: resultadoShow 0.5s ease-out;
+}
+
+@keyframes resultadoShow {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+           }
+}
+
+#resultado h2 {
+    color: #fbfbfb;
+    font-size: 32px;
+    margin: 0;
+}
+
+#resultado p {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0;
+}
+
+.mensagem-inicial {
+    color: #c1a6a6;
+    font-size: 16px;
+    text-shadow: #131313 1px 1px 2px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 25px;
+       }
+
+    h1 {
+        font-size: 24px;
+       }
+
+    button {
+        padding: 15px;
+        font-size: 16px;
+       }
+}
