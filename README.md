@@ -2,10 +2,6 @@
 
 Minha primeira calculadora desenvolvida com HTML, CSS e JavaScript durante o 1º período de ADS (Análise e Desenvolvimento de Sistemas).
 
-## 📸 Preview
-
-![Calculadora](screenshot.png)
-
 ## 🎯 Sobre o Projeto
 
 Este é um projeto de estudos onde coloquei em prática os conceitos aprendidos nas aulas de **Práticas de Programação**:
